@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giftcards</title>
+    <title>Important GitHub Update</title>
     <style>
         body {
             background-color: black;
@@ -43,11 +43,19 @@
     </style>
 </head>
 <body>
-    <div id="overlay-text">APRIL FOOLS.</div> <!-- Change this text -->
+    <div id="overlay-text">This is an important GitHub announcement.</div> <!-- Change this text -->
     <div id="video-container">
-        <video autoplay loop playsinline>
+        <video id="rickroll" autoplay loop playsinline muted>
             <source src="https://raw.githubusercontent.com/yourusername/yourrepo/main/rickroll.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
     </div>
+    <script>
+        window.onload = () => {
+            let video = document.getElementById("rickroll");
+            video.muted = false; // Unmute the video
+            video.play(); // Force playback
+        };
+    </script>
 </body>
 </html>
