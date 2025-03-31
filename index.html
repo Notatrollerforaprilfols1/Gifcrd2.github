@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giftcard</title>
+    <title>Giftcardplace</title>
     <style>
         body {
             background-color: black;
@@ -24,10 +24,10 @@
             justify-content: center;
             align-items: center;
         }
-        video {
+        iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border: none;
         }
         #overlay-text {
             position: fixed;
@@ -43,19 +43,9 @@
     </style>
 </head>
 <body>
-    <div id="overlay-text">April Fools, You are the fool</div> <!-- Change this text -->
+    <div id="overlay-text">April Fools! You're the fool!</div> <!-- Change this text -->
     <div id="video-container">
-        <video id="rickroll" autoplay loop playsinline muted>
-            <source src="https://raw.githubusercontent.com/yourusername/yourrepo/main/rickroll.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <iframe id="rickroll" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&playlist=dQw4w9WgXcQ" allow="autoplay"></iframe>
     </div>
-    <script>
-        window.onload = () => {
-            let video = document.getElementById("rickroll");
-            video.muted = false; // Unmute the video
-            video.play(); // Force playback
-        };
-    </script>
 </body>
 </html>
