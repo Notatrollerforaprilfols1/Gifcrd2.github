@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Great Giftcards</title>
+    <title>Giftcards</title>
     <style>
         body {
             background-color: black;
@@ -24,10 +24,10 @@
             justify-content: center;
             align-items: center;
         }
-        iframe {
+        video {
             width: 100%;
             height: 100%;
-            border: none;
+            object-fit: cover;
         }
         #overlay-text {
             position: fixed;
@@ -43,14 +43,12 @@
     </style>
 </head>
 <body>
-    <div id="overlay-text">ENJOY YOUR GIFTCARD FOOLS!</div> <!-- Change this text -->
+    <div id="overlay-text">APRIL FOOLS.</div> <!-- Change this text -->
     <div id="video-container">
-        <iframe id="rickroll" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&disablekb=1" allow="autoplay"></iframe>
+        <video autoplay loop playsinline>
+            <source src="rickroll.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-    <script>
-        setTimeout(() => {
-            document.getElementById('rickroll').src += "&mute=0"; // Ensures sound plays
-        }, 500); // Small delay in case autoplay gets blocked
-    </script>
 </body>
 </html>
